@@ -1,8 +1,8 @@
-<h1>My Travel Log</h1>
+<h1>Places I've Been</h1>
 
-<ul>
+<ul style="list-style: none; padding: 0;">
   <% for place in @places %>
-    <li>
+    <li style="margin-bottom: 16px;">
       <a href="/places/<%= place["id"] %>">
         <%= place["name"] %>
       </a>
@@ -10,6 +10,6 @@
   <% end %>
 </ul>
 
-<p>
-  <a href="/places/new">Add a new place</a>
+<p style="margin-top: 64px;">
+  <a href="/places/new">New Place</a>
 </p>
