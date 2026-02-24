@@ -1,0 +1,29 @@
+<h1>New Entry for <%= @place["name"] %></h1>
+
+<form action="/entries" method="post">
+  <p>
+    <label for="title">Title</label>
+    <input type="text" name="title">
+  </p>
+
+  <p>
+    <label for="description">Description</label>
+    <textarea name="description"></textarea>
+  </p>
+
+  <p>
+    <label for="posted_on">Date</label>
+    <input type="date" name="posted_on">
+  </p>
+
+  <!-- hidden foreign key to satisfy rubric -->
+  <input type="hidden" name="place_id" value="<%= @place["id"] %>">
+
+  <button>Submit</button>
+</form>
+
+<p>
+  <a href="/places/<%= @place["id"] %>">
+    ← Back to <%= @place["name"] %>
+  </a>
+</p>
